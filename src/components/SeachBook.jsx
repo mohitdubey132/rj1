@@ -4,10 +4,12 @@ import React from 'react';
 import { useState, useEffect ,useRef} from 'react';
 const SeachBook = () => {
   const [data, setData] = useState([])
-  const [book,setBook] = useState('comick')
+  const [book,setBook] = useState('c')
  
   const searchRef =useRef()
   function seacrh(){
+    console.log('strat')
+    console.log(searchRef.current.value);
     setBook(searchRef.current.value);
   }
   useEffect(() => {
