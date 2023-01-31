@@ -1,5 +1,6 @@
 import React from "react";
 import vg from "../assets/2.webp";
+import { Link } from "react-router-dom";
 import {
   AiFillGoogleCircle,
   AiFillAmazonCircle,
@@ -12,8 +13,11 @@ const Home = () => {
     <>
       <div className="home" id="home">
         <main>
-          <h1>TechyStar</h1>
-          <p>Solution to all your problems</p>
+          <h1>Wonder books stores & depo.</h1>
+          <p>we are here to help our customers to find books they need in there local area . </p>
+          <br/>
+          <br/>
+          <button ><Link  to={"/searchBook"}>Order book</Link> </button>
         </main>
       </div>
 

@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.books{
+    margin: 3rem;
+    padding: 15px;
+    display: flex;
+    width:300px;
+    flex-direction: column;
+    height: 500px;
+    background-color: rgb(100, 232, 250);
+    >img{
+        height: 200px;
+    }
+    >bottom{
+        color: rgb(247, 246, 246);
+        background-color: rgb(27, 21, 21);
+        font-weight: 600;
+    }
+}
