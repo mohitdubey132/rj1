@@ -4,7 +4,7 @@ import React from 'react';
 import { useState, useEffect ,useRef} from 'react';
 const SeachBook = () => {
   const [data, setData] = useState([])
-  const [book,setBook] = useState('')
+  const [book,setBook] = useState('C')
  
   const searchRef =useRef()
   function seacrh(){
