@@ -16,6 +16,7 @@ const SeachBook = () => {
     return () => {
       console.log('mohit form function body')
       async function getdata() {
+        console.log(book);
         const get = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${book}`);
         const res = await get.json();
         console.log(res)
