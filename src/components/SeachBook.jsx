@@ -14,9 +14,10 @@ const SeachBook = () => {
   }
   useEffect(() => {
     return () => {
-      console.log('mohit form function body')
+      console.log('mohit form function body');
+      console.log(book);
       async function getdata() {
-        console.log(book);
+        
         const get = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${book}`);
         const res = await get.json();
         console.log(res)
