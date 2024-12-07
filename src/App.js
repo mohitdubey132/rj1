@@ -13,8 +13,27 @@ import "./styles/footer.scss";
 import "./styles/contact.scss";
 import "./styles/mediaquery.scss";
 import "./styles/SeachBook.scss";
-
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 function App() {
+    const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      const { type, payload } = event.data;
+
+      if (type === 'NAVIGATE' && payload?.route) {
+        navigate(payload.route); // Use useNavigate for React Router navigation
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage); // Clean up listener
+    };
+  }, [navigate]);
+
   return (
     <Router>
       <Header />
