@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleMessage = (event) => {
-      alert("hjvh")
+      
       const { type, payload } = event.data;
 
       if (type === 'NAVIGATE' && payload?.route) {
