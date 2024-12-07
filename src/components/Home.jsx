@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import vg from "../assets/2.webp";
 import { Link } from "react-router-dom";
 import {
@@ -7,8 +7,26 @@ import {
   AiFillYoutube,
   AiFillInstagram,
 } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
+const Home = () => {  
+      const navigate = useNavigate();
 
-const Home = () => {
+  useEffect(() => {
+    const handleMessage = (event) => {
+      const { type, payload } = event.data;
+
+      if (type === 'NAVIGATE' && payload?.route) {
+        navigate(payload.route); // Use useNavigate for React Router navigation
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+    // Clean up listener
+    };
+  }, [navigate]);
+
   return (
     <>
       <div className="home" id="home">
