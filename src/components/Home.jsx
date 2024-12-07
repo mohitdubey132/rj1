@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <div className="home" id="home">
         <main>
-          <h1>Wonder books stores & depo.</h1>
+          <h1>Wonder books stores & depo. new</h1>
           <p>we are here to help our customers to find books they need in there local area . </p>
           <br/>
           <br/>
